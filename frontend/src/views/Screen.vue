@@ -213,7 +213,7 @@
 
 .solutions{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .sistemas,
@@ -225,7 +225,7 @@
 
 .sistemas img,
 .sites img {
-    width: 700px;
+    width: 650px;
     transition: transform 0.6s;
 }
 
