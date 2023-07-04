@@ -3,7 +3,7 @@
     <div class="header">
         <nav>
             <div class="logo">
-                <img src="../assets/img/ekko.png" alt="logo"> <!--ADICIONAR LOGO-->
+                <img src="../assets/img/ekkosemfundo.png" alt="logo"> <!--ADICIONAR LOGO-->
             </div>
             <ul id="navbar">
                 <li><a href="#um">Sobre</a></li>
@@ -52,7 +52,7 @@
 <style>
 
 .header {
-    height: 80vh;
+    height: 700px;
     width: 100%;
     background-color: var(--primary-color);
     position: relative;
@@ -164,14 +164,9 @@
     text-align: right;
 }
 
-.header .right-box {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-.header .right-box img {
-    width: 100%;
+.header .main img{
+    width: 400px;
+    border-radius: 300px;
 }
 
 /* Por que escolher */
