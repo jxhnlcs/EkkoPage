@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --primary-color:#50ACA5;
+    --secondary-color:#e2ebf4;
+    --tertiary-color: #e2ebf4;
+}
+
+html{
+    scroll-behavior: smooth;
 }
