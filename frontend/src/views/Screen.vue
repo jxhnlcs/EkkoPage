@@ -29,6 +29,17 @@
     <!--Soluções-->
     <div class="solutions">
         <h1>Nossas Soluções</h1>
+        <div class="sistemas">
+            <h2>Sistemas</h2>
+            <img src="../assets/img/dispositivos.png" alt="">
+            <h3>Desenvolvemos sistemas de gestão sob medida<br> para impulsionar o sucesso de qualquer<br> segmento de empresa</h3>
+        </div>
+        <div class="sites">
+            <h2>Sites</h2> 
+            <img src="../assets/img/dispositivos.png" alt="">
+            <h3>Transforme sua presença online com landing pages<br> impactantes e envolventes, criadas por nossa equipe<br> especializada em design e desenvolvimento</h3>
+        </div>
+        
     </div>
 
 </template>
@@ -124,6 +135,14 @@
     background-color: var(--secondary-color);
     padding: 15px;
     border-radius: 20px;
+    margin-left: 600px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    
+}
+
+
+.main a:hover{
+    background-color: white;
 }
 
 .header .main span{
@@ -163,10 +182,57 @@
     font-size: 30px;
 }
 
-.solutions{
-    margin-top: 150px;
-    text-align: center;
-    background-color: var(--primary-color);
-    height: 60vh;
+
+.solutions {
+  margin-top: 150px;
+  text-align: center;
+  background-color: var(--primary-color);
+  height: 90vh;
+  position: relative;
 }
+
+.solutions h1 {
+  color: white;
+  font-size: 2.8rem;
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sistemas,
+.sites {
+  margin-top: 150px;
+  display: inline-block;
+  text-align: center;
+}
+
+.sistemas {
+  margin-right: 200px;
+}
+
+.sistemas img,
+.sites img {
+  width: 700px;
+  transition: transform 0.6s; /* Adiciona uma transição suave para o efeito */
+}
+
+.sistemas img:hover,
+.sites img:hover {
+  transform: scale(1.1); /* Amplia a imagem em 10% */
+}
+
+.sistemas h2,
+.sites h2 {
+  color: white;
+  font-size: 2.0rem;
+}
+
+.sistemas h3,
+.sites h3 {
+  color: white;
+  font-size: 1.2rem;
+}
+
 </style>
