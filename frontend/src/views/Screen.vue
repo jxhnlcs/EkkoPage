@@ -30,24 +30,27 @@
     </div>
 
     <!--Soluções-->
-    <div id="dois" class="solutions">
+    <div id="dois" class="solutionsSection">
         <h1>Nossas Soluções</h1>
-        <div class="sistemas">
-            <h2>Sistemas</h2>
-            <img src="../assets/img/dispositivos.png" alt="">
-            <h3>Desenvolvemos sistemas de gestão sob medida<br> para impulsionar o sucesso de qualquer<br> segmento de
-                empresa</h3>
-        </div>
-        <div class="sites">
-            <h2>Sites</h2>
-            <img src="../assets/img/dispositivos.png" alt="">
-            <h3>Transforme sua presença online com landing pages<br> impactantes e envolventes, criadas por nossa equipe<br>
-                especializada em design e desenvolvimento</h3>
+        <div class="solutions">
+            <div class="sistemas">
+                <h2>Sistemas</h2>
+                <img src="../assets/img/dispositivos.png" alt="">
+                <h3>Desenvolvemos sistemas de gestão sob medida<br> para impulsionar o sucesso de qualquer<br> segmento de
+                    empresa</h3>
+            </div>
+            <div class="sites">
+                <h2>Sites</h2>
+                <img src="../assets/img/dispositivos.png" alt="">
+                <h3>Transforme sua presença online com landing pages<br> impactantes e envolventes, criadas por nossa equipe<br>
+                    especializada em design e desenvolvimento</h3>
+            </div>
         </div>
     </div>
 </template>
 
 <style>
+
 .header {
     height: 80vh;
     width: 100%;
@@ -95,7 +98,7 @@
     padding: 0.2rem 1rem;
     font-size: 15px;
     font-weight: bold;
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     position: relative;
     z-index: 1;
 }
@@ -107,7 +110,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
     border-radius: 20px;
     z-index: -1;
     transition: 0.5s linear;
@@ -115,10 +118,6 @@
 
 .header nav li a:hover:before {
     width: 100%;
-}
-
-.header nav li a:hover {
-    color: var(--primary-color);
 }
 
 .header .main {
@@ -129,6 +128,7 @@
 
 .main h1 {
     color: white;
+    cursor: default;
 }
 
 .main a {
@@ -139,13 +139,17 @@
     padding: 15px;
     border-radius: 20px;
     margin-left: 600px;
+    font-weight: bold;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
+.main a:hover{
+    color: var(--tertiary-color);
 }
 
 
 .main a:hover {
-    background-color: white;
+    background-color: var(--secondary-color);
 }
 
 .header .main span {
@@ -179,29 +183,37 @@
 
 .why h1 {
     font-size: 60px;
+    cursor: default;
 }
 
 .why h2 {
     font-size: 30px;
+    cursor: default;
 }
 
+/* Soluções */
 
-.solutions {
+.solutionsSection {
     margin-top: 150px;
     text-align: center;
     background-color: var(--primary-color);
-    height: 90vh;
     position: relative;
 }
 
-.solutions h1 {
-    color: white;
+.solutionsSection h1 {
+    color: var(--secondary-color);
     font-size: 2.8rem;
     padding: 25px;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    cursor: default;
+}
+
+.solutions{
+    display: flex;
+    justify-content: center;
 }
 
 .sistemas,
@@ -211,15 +223,10 @@
     text-align: center;
 }
 
-.sistemas {
-    margin-right: 200px;
-}
-
 .sistemas img,
 .sites img {
     width: 700px;
     transition: transform 0.6s;
-    /* Adiciona uma transição suave para o efeito */
 }
 
 .sistemas img:hover,
@@ -230,13 +237,15 @@
 
 .sistemas h2,
 .sites h2 {
-    color: white;
+    color: var(--secondary-color);
     font-size: 2.0rem;
+    cursor: default;
 }
 
 .sistemas h3,
 .sites h3 {
-    color: white;
+    color: var(--secondary-color);
     font-size: 1.2rem;
-    
+    cursor: default;
+
 }</style>
