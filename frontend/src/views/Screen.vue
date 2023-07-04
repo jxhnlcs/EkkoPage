@@ -35,13 +35,13 @@
         <div class="solutions">
             <div class="sistemas">
                 <h2>Sistemas</h2>
-                <img src="../assets/img/dispositivos.png" alt="">
+                <img src="../assets/img/sistema.png" alt="">
                 <h3>Desenvolvemos sistemas de gestão sob medida<br> para impulsionar o sucesso de qualquer<br> segmento de
                     empresa</h3>
             </div>
             <div class="sites">
                 <h2>Sites</h2>
-                <img src="../assets/img/dispositivos.png" alt="">
+                <img src="../assets/img/landingPage.png" alt="">
                 <h3>Transforme sua presença online com landing pages<br> impactantes e envolventes, criadas por nossa equipe<br>
                     especializada em design e desenvolvimento</h3>
             </div>
