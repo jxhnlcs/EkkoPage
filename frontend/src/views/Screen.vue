@@ -23,7 +23,7 @@
     </div>
     <div id="Sobre"></div>
     <!--Por que escolher a ekko-->
-    <div class="why">
+    <div class="why animated-div">
         <div class="whyRow">
             <div class="whyColumn">
                 <h1>VANTAGENS DA EKKO </h1>
@@ -69,7 +69,7 @@
     <div id="Soluções" class="solutionsSection">
         <h1>Nossas Soluções</h1>
         <div class="solutions">
-            <div class="sistemas">
+            <div class="sistemas animated-div2">
                 <img src="../assets/img/sistema.png" alt="">
                 <div class="solutionText">
                     <h2>Sistemas de Gerenciamento</h2>
@@ -78,7 +78,7 @@
                         empresa</h3>
                 </div>
             </div>
-            <div class="sites">
+            <div class="sites animated-div3">
                 <div class="solutionText">
                     <h2>Landing Page</h2>
                     <h3>Transforme sua presença online com landing pages<br> impactantes e envolventes, criadas por nossa
@@ -87,7 +87,7 @@
                 </div>
                 <img src="../assets/img/landingPage.png" alt="">
             </div>
-            <div class="aplicativos">
+            <div class="aplicativos animated-div4">
                 <img src="../assets/img/aplicativo.png" alt="">
                 <div class="solutionText">
                     <h2>Aplicativos</h2>
@@ -100,7 +100,7 @@
 
     <!--Contate-nos-->
 
-    <div id="Contato" class="contatoSection">
+    <div id="Contato" class="contatoSection animated-div5">
         <div class="contatoRow">
             <div class="contatoColumn">
                 <h1>Contate-nos</h1>
@@ -603,6 +603,62 @@ footer .bottom-details .bottom_text{
     opacity: 1;
 }
 
+.animated-div {
+    opacity: 0; /* Define a div como invisível */
+    transform: translateX(-100%); /* Move a div para fora da tela */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+  }
+  
+  .animated-div.animate {
+    opacity: 1; /* Define a div como visível */
+    transform: translateX(0); /* Move a div para dentro da tela */
+  }
+
+  .animated-div2 {
+    opacity: 0; /* Define a div como invisível */
+    transform: translateX(-100%); /* Move a div para fora da tela */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+  }
+  
+  .animated-div2.animate {
+    opacity: 1; /* Define a div como visível */
+    transform: translateX(0); /* Move a div para dentro da tela */
+  }
+
+  .animated-div3 {
+    opacity: 0; /* Define a div como invisível */
+    transform: translateX(100%); /* Move a div para fora da tela */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+  }
+  
+  .animated-div3.animate {
+    opacity: 1; /* Define a div como visível */
+    transform: translateX(0); /* Move a div para dentro da tela */
+  }
+
+  .animated-div4 {
+    opacity: 0; /* Define a div como invisível */
+    transform: translateX(-100%); /* Move a div para fora da tela */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+  }
+  
+  .animated-div4.animate {
+    opacity: 1; /* Define a div como visível */
+    transform: translateX(0); /* Move a div para dentro da tela */
+  }
+
+  .animated-div5 {
+    opacity: 0; /* Define a div como invisível */
+    transform: translateX(-100%); /* Move a div para fora da tela */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+  }
+  
+  .animated-div5.animate {
+    opacity: 1; /* Define a div como visível */
+    transform: translateX(0); /* Move a div para dentro da tela */
+  }
+
+
 
 </style>
 
@@ -615,9 +671,11 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.animateDivs);
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.animateDivs);
   },
   methods: {
     handleScroll() {
@@ -628,7 +686,25 @@ export default {
         top: 0,
         behavior: 'smooth'
       });
+    },
+    animateDivs() {
+      this.animateDiv(".animated-div");
+      this.animateDiv(".animated-div2");
+      this.animateDiv(".animated-div3");
+      this.animateDiv(".animated-div4");
+      this.animateDiv(".animated-div5");
+    },
+    animateDiv(selector) {
+      var animatedDiv = document.querySelector(selector);
+      var position = animatedDiv.getBoundingClientRect();
+
+      if (position.top < window.innerHeight && position.bottom >= 0) {
+        animatedDiv.classList.add("animate");
+      }
     }
   }
 }
+
+  
+
 </script>
