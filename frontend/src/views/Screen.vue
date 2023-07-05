@@ -32,23 +32,34 @@
                     criar
                     sistemas inovadores que geram um<br> diferencial competitivo para o seu negócio.</h2>
             </div>
+            <img src="../assets/img/team-animate.svg">
         </div>
         <div class="icons">
             <div class="icon">
-                <a href="">a</a>
-                <h5>Experiência Especializada</h5>
+                <a href="">
+                    <span class="material-symbols-sharp">
+                        verified
+                    </span>
+                </a>
+                <h3>Experiência<br>Especializada</h3>
             </div>
             <div class="icon">
-                <a href="">a</a>
-                <h5>Abordagem centrada ao cliente</h5>
+                <a href=""><span class="material-symbols-sharp">
+                        target
+                    </span></a>
+                <h3>Abordagem centrada<br> ao cliente</h3>
             </div>
             <div class="icon">
-                <a href="">a</a>
-                <h5>Design atraente e intuitivo</h5>
+                <a href=""><span class="material-symbols-sharp">
+                        brush
+                    </span></a>
+                <h3>Design atraente<br> e intuitivo</h3>
             </div>
             <div class="icon">
-                <a href="">a</a>
-                <h5>Suporte e Manutenção</h5>
+                <a href=""><span class="material-symbols-sharp">
+                        construction
+                    </span></a>
+                <h3>Suporte e<br> Manutenção</h3>
             </div>
         </div>
     </div>
@@ -207,6 +218,9 @@
 
 .whyRow {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
 .why h1 {
@@ -216,8 +230,12 @@
     color: var(--primary-color);
 }
 
+.whyRow img {
+    width: 700px;
+}
+
 .why h2 {
-    font-size: 20px;
+    font-size: 23px;
     cursor: default;
     font-weight: 400;
     line-height: normal;
@@ -231,7 +249,7 @@
     justify-content: space-around;
 }
 
-.icons .icon{
+.icons .icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,8 +260,28 @@
     background-color: var(--primary-color);
     padding: 50px 55px;
     border-radius: 50px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
 }
 
+.icon h3{
+    font-size: 22px;
+    color: var(--primary-color);
+    text-align:center;
+    text-transform: uppercase;
+}
+
+.icons a span{
+    font-size: 60px;
+    color:var(--secondary-color)
+    
+    
+}
+
+.icons a:hover{
+    background-color: var(--tertiary-color);
+    
+}
 /* Soluções */
 
 .solutionsSection {
