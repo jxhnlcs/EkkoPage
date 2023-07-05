@@ -115,6 +115,10 @@
             <img src="../assets/img/contact-us-animate.svg" alt="">
         </div>
     </div>
+     <!--Botão back to top-->
+     <div class="back-to-top" v-if="showBackToTop" @click="scrollToTop">
+        <i class="fa fa-arrow-up"></i>
+    </div>
 
     <!--Footer-->
     <footer>
@@ -572,5 +576,59 @@ footer .bottom-details .bottom_text{
   margin-right: 10px;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:var(--quarter-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1s;
+    transition: background-color  0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+    background-color: var(--fiver-color);
+    color: var(--primary-color);
+}
+
+.back-to-top.show {
+    opacity: 1;
+}
+
 
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      showBackToTop: false
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.showBackToTop = window.scrollY > 500;
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+</script>
