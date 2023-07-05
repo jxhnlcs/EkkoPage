@@ -86,6 +86,13 @@
                 </div>
                 <img src="../assets/img/landingPage.png" alt="">
             </div>
+            <div class="aplicativos">
+                <img src="../assets/img/aplicativo.png" alt="">
+                <div class="solutionText">
+                    <h2>Aplicativos</h2>
+                    <h3>Explore novas possibilidades com<br>aplicativos inovadores, desenvolvidos<br> para facilitar a experiência do usuário e<br>impulsionar o crescimento do seu negócio</h3>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -151,7 +158,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-color);
     border-radius: 20px;
     z-index: -1;
     transition: 0.5s linear;
@@ -168,7 +175,7 @@
 
 
 .main h1 {
-    color: white;
+    color: var(--secondary-color);
     cursor: default;
 }
 
@@ -224,7 +231,7 @@
 }
 
 .why h1 {
-    font-size: 38px;
+    font-size: 48px;
     font-weight: 700;
     cursor: default;
     color: var(--primary-color);
@@ -235,16 +242,16 @@
 }
 
 .why h2 {
-    font-size: 23px;
+    font-size: 28px;
     cursor: default;
     font-weight: 400;
     line-height: normal;
-    color: #526368;
+    color: var(--quarter-color);
     font-style: italic;
 }
 
 .icons {
-    margin-top: 60px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
@@ -291,25 +298,25 @@
     position: relative;
 }
 
-.sistemas .solutionText {
-    text-align: left;
-    background-color: var(--tertiary-color);
-    padding: 5px 30px;
-    border-radius: 20px;
-    box-shadow: 0 0.5rem 4rem rgba(197, 197, 197, 0.452);
-    transition: 0.6s;
+.solutionsSection h1 {
+    color: var(--secondary-color);
+    font-size: 2.8rem;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: default;
 }
 
-.sistemas .solutionText:hover {
-    box-shadow: none;
-}
-
-.sites .solutionText:hover {
-    box-shadow: none;
+.solutions {
+    display: flex;
+    flex-direction: column;
 }
 
 .sistemas,
-.sites {
+.sites,
+.aplicativos {
     margin-top: 150px;
     display: inline-block;
     text-align: center;
@@ -322,9 +329,17 @@
     margin-top: -30px;
 }
 
-.solutions {
-    display: flex;
-    flex-direction: column;
+.aplicativos{
+    margin-top: -30px;
+}
+
+.sistemas .solutionText {
+    text-align: left;
+    background-color: var(--tertiary-color);
+    padding: 5px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 4rem rgba(197, 197, 197, 0.452);
+    transition: 0.6s;
 }
 
 .sistemas .solutionText h2 {
@@ -336,6 +351,7 @@
     font-style: italic;
     font-weight: 100;
 }
+
 
 .sites .solutionText {
     text-align: left;
@@ -356,42 +372,62 @@
     font-weight: 100;
 }
 
+.aplicativos .solutionText {
+    text-align: left;
+    background-color: var(--tertiary-color);
+    padding: 5px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 4rem rgba(197, 197, 197, 0.452);
+    transition: 0.6s;
+}
+
+.aplicativos .solutionText h2 {
+    font-size: 30px;
+}
+
+.aplicativos .solutionText h3 {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 100;
+}
+
 .sites .solutionText {
     text-align: right;
 }
 
-.solutionsSection h1 {
-    color: var(--secondary-color);
-    font-size: 2.8rem;
-    padding: 25px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: default;
+.sistemas .solutionText:hover {
+    box-shadow: none;
+}
+
+.sites .solutionText:hover {
+    box-shadow: none;
 }
 
 .sistemas img,
-.sites img {
+.sites img,
+.aplicativos img {
     width: 850px;
     transition: transform 0.6s;
 }
 
 .sistemas img:hover,
-.sites img:hover {
+.sites img:hover,
+.aplicativos img:hover {
     transform: scale(1.1);
     /* Amplia a imagem em 10% */
 }
 
 .sistemas h2,
-.sites h2 {
+.sites h2,
+.aplicativos h2 {
     color: var(--secondary-color);
     font-size: 2.0rem;
     cursor: default;
 }
 
 .sistemas h3,
-.sites h3 {
+.sites h3,
+.aplicativos h3 {
     color: var(--secondary-color);
     font-size: 1.2rem;
     cursor: default;
