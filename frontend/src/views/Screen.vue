@@ -225,7 +225,7 @@
 
 .whyRow {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
 }
@@ -238,6 +238,7 @@
 }
 
 .whyRow img {
+    margin-left: 50px;
     width: 700px;
 }
 
@@ -268,7 +269,6 @@
     padding: 50px 55px;
     border-radius: 50px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-
 }
 
 .icon h3{
@@ -281,8 +281,6 @@
 .icons a span{
     font-size: 60px;
     color:var(--secondary-color)
-    
-    
 }
 
 .icons a:hover{
