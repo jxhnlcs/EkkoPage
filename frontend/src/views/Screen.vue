@@ -19,10 +19,10 @@
                 <a href="">Peça Agora</a>
             </div>
         </div>
-        <div id="um"></div>
-    </div>
+        <div></div>
+    </div> <div id="um"></div>
     <!--Por que escolher a ekko-->
-    <div class="why">
+    <div class="why" >
         <div class="whyRow">
             <div class="whyColumn">
                 <h1>VANTAGENS DA EKKO </h1>
