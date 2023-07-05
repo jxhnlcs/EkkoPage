@@ -23,12 +23,33 @@
     </div>
     <!--Por que escolher a ekko-->
     <div class="why">
-        <div class="whyColumn">
-            <h1>POR QUE ESCOLHER A EKKO ?</h1>
-            <h2>Contamos com uma equipe de profissionais experientes e<br> apaixonados pela tecnologia, prontos para
-                trabalhar
-                em parceria<br> com você. Com uma abordagem colaborativa, entendemos suas<br> metas e desafios para criar
-                sistemas inovadores que geram um<br> diferencial competitivo para o seu negócio.</h2>
+        <div class="whyRow">
+            <div class="whyColumn">
+                <h1>VANTAGENS DA EKKO </h1>
+                <h2>Contamos com uma equipe de profissionais experientes e<br> apaixonados pela tecnologia, prontos para
+                    trabalhar
+                    em parceria<br> com você. Com uma abordagem colaborativa, entendemos suas<br> metas e desafios para
+                    criar
+                    sistemas inovadores que geram um<br> diferencial competitivo para o seu negócio.</h2>
+            </div>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <a href="">a</a>
+                <h5>Experiência Especializada</h5>
+            </div>
+            <div class="icon">
+                <a href="">a</a>
+                <h5>Abordagem centrada ao cliente</h5>
+            </div>
+            <div class="icon">
+                <a href="">a</a>
+                <h5>Design atraente e intuitivo</h5>
+            </div>
+            <div class="icon">
+                <a href="">a</a>
+                <h5>Suporte e Manutenção</h5>
+            </div>
         </div>
     </div>
 
@@ -182,6 +203,9 @@
 
 .why {
     margin-top: 60px;
+}
+
+.whyRow {
     display: flex;
 }
 
@@ -199,6 +223,25 @@
     line-height: normal;
     color: #526368;
     font-style: italic;
+}
+
+.icons {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons .icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons a {
+    background-color: var(--primary-color);
+    padding: 50px 55px;
+    border-radius: 50px;
 }
 
 /* Soluções */
