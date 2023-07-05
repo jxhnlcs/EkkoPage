@@ -100,16 +100,16 @@
 
     <!--Contate-nos-->
 
-    <div class="contatoSection">
+    <div id="tres" class="contatoSection">
         <div class="contatoRow">
             <div class="contatoColumn">
                 <h1>Contate-nos</h1>
                 <h2>Tire dúvidas ou planeje um orçamento.<br>Nossa equipe especializada está pronta<br>para esclarecer todas
                     as suas dúvidas e<br>fornecer informações detalhadas sobre<br>nossos produtos e serviços.</h2>
                 <div class="contatoIcons">
-                    <a href=""><img src="../assets/img/whatsapp.png" alt=""></a>
-                    <a href=""><img src="../assets/img/instagram.png" alt=""></a>
-                    <a href=""><img src="../assets/img/outlook.png" alt=""></a>
+                    <a href="https://api.whatsapp.com/send/?phone=557592868576&text&type=phone_number&app_absent=0"><img src="../assets/img/whatsapp.png" alt="Whatsapp icon"></a>
+                    <a href="https://www.instagram.com/ekko.sistemas/"><img src="../assets/img/instagram.png" alt="Instagram icon"></a>
+                    <a href="mailto:ekkosistemas@outlook.com"><img src="../assets/img/outlook.png" alt="Outlook icon"></a>
                 </div>
             </div>
             <img src="../assets/img/contact-us-animate.svg" alt="">
