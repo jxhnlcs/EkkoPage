@@ -20,9 +20,10 @@
             </div>
         </div>
         <div></div>
-    </div> <div id="um"></div>
+    </div>
+    <div id="um"></div>
     <!--Por que escolher a ekko-->
-    <div class="why" >
+    <div class="why">
         <div class="whyRow">
             <div class="whyColumn">
                 <h1>VANTAGENS DA EKKO </h1>
@@ -90,11 +91,39 @@
                 <img src="../assets/img/aplicativo.png" alt="">
                 <div class="solutionText">
                     <h2>Aplicativos</h2>
-                    <h3>Explore novas possibilidades com<br>aplicativos inovadores, desenvolvidos<br> para facilitar a experiência do usuário e<br>impulsionar o crescimento do seu negócio</h3>
+                    <h3>Explore novas possibilidades com<br>aplicativos inovadores, desenvolvidos<br> para facilitar a
+                        experiência do usuário e<br>impulsionar o crescimento do seu negócio</h3>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--Contate-nos-->
+
+    <div class="contatoSection">
+        <div class="contatoRow">
+            <div class="contatoColumn">
+                <h1>Contate-nos</h1>
+                <h2>Tire dúvidas ou planeje um orçamento.<br>Nossa equipe especializada está pronta<br>para esclarecer todas
+                    as suas dúvidas e<br>fornecer informações detalhadas sobre<br>nossos produtos e serviços.</h2>
+                <div class="contatoIcons">
+                    <a href=""><img src="../assets/img/whatsapp.png" alt=""></a>
+                    <a href=""><img src="../assets/img/instagram.png" alt=""></a>
+                    <a href=""><img src="../assets/img/outlook.png" alt=""></a>
+                </div>
+            </div>
+            <img src="../assets/img/contact-us-animate.svg" alt="">
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2023 Ekko. Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
 </template>
 
 <style>
@@ -271,29 +300,30 @@
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.icon h3{
+.icon h3 {
     font-size: 22px;
     color: var(--primary-color);
-    text-align:center;
+    text-align: center;
     text-transform: uppercase;
 }
 
-.icons a span{
+.icons a span {
     font-size: 60px;
-    color:var(--secondary-color)
+    color: var(--secondary-color)
 }
 
-.icons a:hover{
+.icons a:hover {
     background-color: var(--tertiary-color);
-    
+
 }
+
 /* Soluções */
 
 .solutionsSection {
     margin-top: 150px;
     text-align: center;
-    background: rgb(0,136,181);
-    background: linear-gradient(180deg, rgba(0,136,181,1) 50%, rgba(0,54,108,1) 84%);
+    background: rgb(0, 136, 181);
+    background: linear-gradient(180deg, rgba(0, 136, 181, 1) 50%, rgba(0, 54, 108, 1) 84%);
     position: relative;
 }
 
@@ -328,7 +358,7 @@
     margin-top: -30px;
 }
 
-.aplicativos{
+.aplicativos {
     margin-top: -30px;
 }
 
@@ -402,6 +432,10 @@
     box-shadow: none;
 }
 
+.aplicativos .solutionText:hover {
+    box-shadow: none;
+}
+
 .sistemas img,
 .sites img,
 .aplicativos img {
@@ -430,6 +464,81 @@
     color: var(--secondary-color);
     font-size: 1.2rem;
     cursor: default;
-
 }
+
+.contatoSection{
+    margin-top: 60px;
+}
+
+.contatoRow{
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-around;
+    
+}
+
+.contatoRow h1 {
+    font-size: 48px;
+    font-weight: 700;
+    cursor: default;
+    color: var(--primary-color);
+}
+
+.contatoRow img {
+    /* margin-left: 50px; */
+    width: 500px;
+}
+
+.contatoRow h2 {
+    font-size: 28px;
+    cursor: default;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+.contatoIcons{
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+
+.contatoIcons a img{
+    width: 65px;
+    margin-right: 39px;
+    border-radius: 50%;
+}
+
+/* Footer */
+
+footer .bottom-details{
+  width: 100%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+footer .bottom-details .bottom_text{
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a{
+  margin-right: 10px;
+}
+
+
 </style>
