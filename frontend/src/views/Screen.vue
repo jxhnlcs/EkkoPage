@@ -107,9 +107,9 @@
                 <h2>Tire dúvidas ou planeje um orçamento.<br>Nossa equipe especializada está pronta<br>para esclarecer todas
                     as suas dúvidas e<br>fornecer informações detalhadas sobre<br>nossos produtos e serviços.</h2>
                 <div class="contatoIcons">
-                    <a href="https://api.whatsapp.com/send/?phone=557592868576&text&type=phone_number&app_absent=0"><img src="../assets/img/whatsapp.png" alt="Whatsapp icon"></a>
-                    <a href="https://www.instagram.com/ekko.sistemas/"><img src="../assets/img/instagram.png" alt="Instagram icon"></a>
-                    <a href="mailto:ekkosistemas@outlook.com"><img src="../assets/img/outlook.png" alt="Outlook icon"></a>
+                    <a class="wpp" href="https://api.whatsapp.com/send/?phone=557592868576&text&type=phone_number&app_absent=0"><img src="../assets/img/whatsapp.png" alt="Whatsapp icon"></a>
+                    <a  class="insta" href="https://www.instagram.com/ekko.sistemas/"><img src="../assets/img/instagram.png" alt="Instagram icon"></a>
+                    <a class="email" href="mailto:ekkosistemas@outlook.com"><img src="../assets/img/outlook.png" alt="Outlook icon"></a>
                 </div>
             </div>
             <img src="../assets/img/contact-us-animate.svg" alt="">
@@ -502,6 +502,38 @@
     display: flex;
     justify-content: start;
     margin-top: 15px;
+    
+}
+
+.contatoIcons 
+.email{
+    transition: transform 0.6s;   
+}
+
+.contatoIcons 
+.wpp{
+    transition: transform 0.6s;   
+}
+
+.contatoIcons 
+.insta{
+    transition: transform 0.6s;   
+}
+
+
+.contatoIcons 
+.email:hover{
+    transform: scale(1.1);
+}
+
+.contatoIcons 
+.wpp:hover{
+    transform: scale(1.1);
+}
+
+.contatoIcons 
+.insta:hover{
+    transform: scale(1.1);
 }
 
 
