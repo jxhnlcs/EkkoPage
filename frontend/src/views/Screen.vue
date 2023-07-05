@@ -649,7 +649,7 @@ footer .bottom-details .bottom_text{
 
   .animated-div5 {
     opacity: 0; /* Define a div como invisível */
-    transform: translateX(-100%); /* Move a div para fora da tela */
+    transform: translateX(100%); /* Move a div para fora da tela */
     transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
   }
   
