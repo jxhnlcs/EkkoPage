@@ -36,7 +36,7 @@
             <img src="../assets/img/team-animate.svg">
         </div>
         <div class="icons">
-            <div class="icon">
+            <div class="icon animated-div6">
                 <a href="">
                     <span class="material-symbols-sharp">
                         verified
@@ -44,19 +44,19 @@
                 </a>
                 <h3>Experiência<br>Especializada</h3>
             </div>
-            <div class="icon">
+            <div class="icon animated-div7">
                 <a href=""><span class="material-symbols-sharp">
                         target
                     </span></a>
                 <h3>Abordagem centrada<br> ao cliente</h3>
             </div>
-            <div class="icon">
+            <div class="icon animated-div8">
                 <a href=""><span class="material-symbols-sharp">
                         brush
                     </span></a>
                 <h3>Design atraente<br> e intuitivo</h3>
             </div>
-            <div class="icon">
+            <div class="icon animated-div9">
                 <a href=""><span class="material-symbols-sharp">
                         construction
                     </span></a>
@@ -602,11 +602,10 @@ footer .bottom-details .bottom_text{
 .back-to-top.show {
     opacity: 1;
 }
-
 .animated-div {
     opacity: 0; /* Define a div como invisível */
     transform: translateX(-100%); /* Move a div para fora da tela */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+    transition: opacity 1.4s ease-out, transform 1.4s ease-out; /* Define a transição */
   }
   
   .animated-div.animate {
@@ -614,10 +613,21 @@ footer .bottom-details .bottom_text{
     transform: translateX(0); /* Move a div para dentro da tela */
   }
 
-  .animated-div2 {
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated-div2 {
     opacity: 0; /* Define a div como invisível */
     transform: translateX(-100%); /* Move a div para fora da tela */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Define a transição */
   }
   
   .animated-div2.animate {
@@ -628,7 +638,7 @@ footer .bottom-details .bottom_text{
   .animated-div3 {
     opacity: 0; /* Define a div como invisível */
     transform: translateX(100%); /* Move a div para fora da tela */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Define a transição */
   }
   
   .animated-div3.animate {
@@ -639,7 +649,7 @@ footer .bottom-details .bottom_text{
   .animated-div4 {
     opacity: 0; /* Define a div como invisível */
     transform: translateX(-100%); /* Move a div para fora da tela */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Define a transição */
   }
   
   .animated-div4.animate {
@@ -650,7 +660,7 @@ footer .bottom-details .bottom_text{
   .animated-div5 {
     opacity: 0; /* Define a div como invisível */
     transform: translateX(100%); /* Move a div para fora da tela */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out; /* Define a transição */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Define a transição */
   }
   
   .animated-div5.animate {
@@ -658,6 +668,33 @@ footer .bottom-details .bottom_text{
     transform: translateX(0); /* Move a div para dentro da tela */
   }
 
+.animated-div6 {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeSlideIn 0.9s ease-out forwards;
+  animation-delay: 1s; /* Atraso de 2 segundos */
+}
+
+.animated-div7 {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeSlideIn 0.9s ease-out forwards;
+  animation-delay: 1.2s; /* Atraso de 2.2 segundos */
+}
+
+.animated-div8 {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeSlideIn 0.9s ease-out forwards;
+  animation-delay: 1.4s; /* Atraso de 2.4 segundos */
+}
+
+.animated-div9 {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeSlideIn 0.9s ease-out forwards;
+  animation-delay: 1.6s; /* Atraso de 2.6 segundos */
+}
 
 
 </style>
@@ -693,6 +730,10 @@ export default {
       this.animateDiv(".animated-div3");
       this.animateDiv(".animated-div4");
       this.animateDiv(".animated-div5");
+      this.animateDiv(".animated-div6");
+      this.animateDiv(".animated-div7");
+      this.animateDiv(".animated-div8");
+      this.animateDiv(".animated-div9");
     },
     animateDiv(selector) {
       var animatedDiv = document.querySelector(selector);
