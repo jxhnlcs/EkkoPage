@@ -16,7 +16,7 @@
             <img src="../assets/img/ekkosemfundo.png" alt="">
             <div>
                 <h1><span>AUTOMATIZE</span><br>processos e ganhe tempo com<br>nossas soluções inteligentes<br></h1>
-                <a href="">Peça Agora</a>
+                <a href="https://api.whatsapp.com/send/?phone=557592868576&text&type=phone_number&app_absent=0">Peça Agora</a>
             </div>
         </div>
         <div></div>
