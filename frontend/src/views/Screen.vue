@@ -6,9 +6,9 @@
                 <img src="../assets/img/ekkosemfundo.png" alt="logo"> <!--ADICIONAR LOGO-->
             </div>
             <ul id="navbar">
-                <li><a href="#um">Sobre</a></li>
-                <li><a href="#dois">Soluções</a></li>
-                <li><a href="#tres">Contato</a></li>
+                <li><a href="#Sobre">Sobre</a></li>
+                <li><a href="#Soluções">Soluções</a></li>
+                <li><a href="#Contato">Contato</a></li>
             </ul>
         </nav>
         <!--Main-->
@@ -21,7 +21,7 @@
         </div>
         <div></div>
     </div>
-    <div id="um"></div>
+    <div id="Sobre"></div>
     <!--Por que escolher a ekko-->
     <div class="why">
         <div class="whyRow">
@@ -66,7 +66,7 @@
     </div>
 
     <!--Soluções-->
-    <div id="dois" class="solutionsSection">
+    <div id="Soluções" class="solutionsSection">
         <h1>Nossas Soluções</h1>
         <div class="solutions">
             <div class="sistemas">
@@ -100,7 +100,7 @@
 
     <!--Contate-nos-->
 
-    <div id="tres" class="contatoSection">
+    <div id="Contato" class="contatoSection">
         <div class="contatoRow">
             <div class="contatoColumn">
                 <h1>Contate-nos</h1>
