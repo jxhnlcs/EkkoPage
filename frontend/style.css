@@ -9,8 +9,9 @@ body{
 
 :root{
     --primary-color:#0088B5;
-    --secondary-color:#e2ebf4;
+    --secondary-color:#ffffff;
     --tertiary-color: #00516c;
+    --quarter-color: #4cd2ff75;
 }
 
 html{

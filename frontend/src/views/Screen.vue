@@ -13,18 +13,22 @@
         </nav>
         <!--Main-->
         <div class="main">
-            <img src="../assets/img/ekkoWhite.png" alt="">
+            <img src="../assets/img/ekkosemfundo.png" alt="">
             <div>
                 <h1><span>AUTOMATIZE</span><br>processos e ganhe tempo com<br>nossas soluções inteligentes<br></h1>
                 <a href="">Peça Agora</a>
             </div>
         </div>
-        <div id="um" ></div>
+        <div id="um"></div>
     </div>
     <!--Por que escolher a ekko-->
     <div class="why">
-        <h1>POR QUE ESCOLHER A EKKO ?</h1>
-        <h2>Contamos com uma equipe de profissionais experientes e<br> apaixonados pela tecnologia, prontos para trabalhar
+        <div class="rowWhy">
+            <div class="line"></div>
+            <h1>POR QUE ESCOLHER A EKKO ?</h1>
+        </div>
+        <h2>Contamos com uma equipe de profissionais experientes e<br> apaixonados pela tecnologia, prontos para
+            trabalhar
             em parceria<br> com você. Com uma abordagem colaborativa, entendemos suas<br> metas e desafios para criar
             sistemas inovadores que geram um<br> diferencial competitivo para o seu negócio.</h2>
     </div>
@@ -34,27 +38,33 @@
         <h1>Nossas Soluções</h1>
         <div class="solutions">
             <div class="sistemas">
-                <h2>Sistemas</h2>
                 <img src="../assets/img/sistema.png" alt="">
-                <h3>Desenvolvemos sistemas de gestão sob medida<br> para impulsionar o sucesso de qualquer<br> segmento de
-                    empresa</h3>
+                <div class="solutionText">
+                    <h2>Sistemas de Gerenciamento</h2>
+                    <h3>Desenvolvemos sistemas de gestão sob medida<br> para impulsionar o sucesso de qualquer<br> segmento
+                        de
+                        empresa</h3>
+                </div>
             </div>
             <div class="sites">
-                <h2>Sites</h2>
+                <div class="solutionText">
+                    <h2>Landing Page</h2>
+                    <h3>Transforme sua presença online com landing pages<br> impactantes e envolventes, criadas por nossa
+                        equipe<br>
+                        especializada em design e desenvolvimento</h3>
+                </div>
                 <img src="../assets/img/landingPage.png" alt="">
-                <h3>Transforme sua presença online com landing pages<br> impactantes e envolventes, criadas por nossa equipe<br>
-                    especializada em design e desenvolvimento</h3>
             </div>
         </div>
     </div>
 </template>
 
 <style>
-
 .header {
-    height: 700px;
+    height: 750px;
     width: 100%;
-    background-color: var(--primary-color);
+    background: url(../assets/img/casalLaptop.png);
+
     position: relative;
 }
 
@@ -143,7 +153,7 @@
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.main a:hover{
+.main a:hover {
     color: var(--tertiary-color);
 }
 
@@ -164,25 +174,36 @@
     text-align: right;
 }
 
-.header .main img{
+.header .main img {
     width: 400px;
     border-radius: 300px;
 }
 
 /* Por que escolher */
+.line {
+    width: 62px;
+    height: 5px;
+    flex-shrink: 0;
+    background: #0088B5;
+}
+
 .why {
     margin-top: 130px;
     color: var(--primary-color);
-    text-align: center;
+}
+
+.rowWhy {
+    display: flex;
+    align-items: center;
 }
 
 .why h1 {
-    font-size: 60px;
+    font-size: 30px;
     cursor: default;
 }
 
 .why h2 {
-    font-size: 30px;
+    font-size: 22px;
     cursor: default;
 }
 
@@ -193,6 +214,75 @@
     text-align: center;
     background-color: var(--primary-color);
     position: relative;
+}
+
+.sistemas .solutionText {
+    text-align: left;
+    background-color: var(--tertiary-color);
+    padding: 5px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 4rem rgba(197, 197, 197, 0.452);
+    transition: 0.6s;
+}
+
+.sistemas .solutionText:hover {
+    box-shadow: none;
+}
+
+.sites .solutionText:hover {
+    box-shadow: none;
+}
+
+.sistemas,
+.sites {
+    margin-top: 150px;
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sites {
+    margin-top: -30px;
+}
+
+.solutions {
+    display: flex;
+    flex-direction: column;
+}
+
+.sistemas .solutionText h2 {
+    font-size: 30px;
+}
+
+.sistemas .solutionText h3 {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.sites .solutionText {
+    text-align: left;
+    background-color: var(--tertiary-color);
+    padding: 5px 30px;
+    border-radius: 30px;
+    box-shadow: 0 0.5rem 4rem rgba(197, 197, 197, 0.452);
+    transition: 0.6s;
+}
+
+.sites .solutionText h2 {
+    font-size: 30px;
+}
+
+.sites .solutionText h3 {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.sites .solutionText {
+    text-align: right;
 }
 
 .solutionsSection h1 {
@@ -206,21 +296,9 @@
     cursor: default;
 }
 
-.solutions{
-    display: flex;
-    justify-content: space-around;
-}
-
-.sistemas,
-.sites {
-    margin-top: 150px;
-    display: inline-block;
-    text-align: center;
-}
-
 .sistemas img,
 .sites img {
-    width: 650px;
+    width: 850px;
     transition: transform 0.6s;
 }
 
@@ -243,4 +321,5 @@
     font-size: 1.2rem;
     cursor: default;
 
-}</style>
+}
+</style>
