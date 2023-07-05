@@ -292,7 +292,8 @@
 .solutionsSection {
     margin-top: 150px;
     text-align: center;
-    background-color: var(--primary-color);
+    background: rgb(0,136,181);
+    background: linear-gradient(180deg, rgba(0,136,181,1) 50%, rgba(0,54,108,1) 84%);
     position: relative;
 }
 
