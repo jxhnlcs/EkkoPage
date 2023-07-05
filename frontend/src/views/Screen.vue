@@ -23,14 +23,13 @@
     </div>
     <!--Por que escolher a ekko-->
     <div class="why">
-        <div class="rowWhy">
-            <div class="line"></div>
+        <div class="whyColumn">
             <h1>POR QUE ESCOLHER A EKKO ?</h1>
+            <h2>Contamos com uma equipe de profissionais experientes e<br> apaixonados pela tecnologia, prontos para
+                trabalhar
+                em parceria<br> com você. Com uma abordagem colaborativa, entendemos suas<br> metas e desafios para criar
+                sistemas inovadores que geram um<br> diferencial competitivo para o seu negócio.</h2>
         </div>
-        <h2>Contamos com uma equipe de profissionais experientes e<br> apaixonados pela tecnologia, prontos para
-            trabalhar
-            em parceria<br> com você. Com uma abordagem colaborativa, entendemos suas<br> metas e desafios para criar
-            sistemas inovadores que geram um<br> diferencial competitivo para o seu negócio.</h2>
     </div>
 
     <!--Soluções-->
@@ -180,31 +179,26 @@
 }
 
 /* Por que escolher */
-.line {
-    width: 62px;
-    height: 5px;
-    flex-shrink: 0;
-    background: #0088B5;
-}
 
 .why {
-    margin-top: 130px;
-    color: var(--primary-color);
-}
-
-.rowWhy {
+    margin-top: 60px;
     display: flex;
-    align-items: center;
 }
 
 .why h1 {
-    font-size: 30px;
+    font-size: 38px;
+    font-weight: 700;
     cursor: default;
+    color: var(--primary-color);
 }
 
 .why h2 {
-    font-size: 22px;
+    font-size: 20px;
     cursor: default;
+    font-weight: 400;
+    line-height: normal;
+    color: #526368;
+    font-style: italic;
 }
 
 /* Soluções */
