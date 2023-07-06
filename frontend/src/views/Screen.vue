@@ -1036,5 +1036,9 @@ footer .bottom-details .bottom_text {
         .contatoIcons a img{
             width: 55px;
         }
+
+        .bottom-details .bottom_text span, .bottom-details .bottom_text a {
+            font-size: 11px;
+        }
     }
 }</style>
