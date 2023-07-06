@@ -8,4 +8,4 @@
 - Framework Web: Vue.js
 - Linguagens Web: HTML, CSS, JavaScript
 - Ferramentas de Controle de Versão: Git, GitHub
-`
+
