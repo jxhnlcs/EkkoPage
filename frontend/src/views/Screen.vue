@@ -850,6 +850,31 @@ footer .bottom-details .bottom_text {
     }
 }
 
+@media only screen and (max-width: 1115px) {
+
+    .header nav img{
+        margin-right: 300px;
+    }
+
+    .whyColumn{
+        margin-left: 30px;
+    }
+
+    .header .main h1 {
+        font-size: 32px;
+        text-align: right;
+    }
+
+
+    .header .main span {
+        font-size: 60px;
+    }
+
+    .main a{
+        margin-left: 380px;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
 
     .header .main {
