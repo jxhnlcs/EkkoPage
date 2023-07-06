@@ -426,6 +426,7 @@ export default {
 
 .aplicativos {
     margin-top: -30px;
+    margin-bottom: 100px;
 }
 
 .sistemas .solutionText {
@@ -840,6 +841,14 @@ footer .bottom-details .bottom_text {
         font-size: 26px;
         font-style: italic;
         font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .icons{
+        display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px 10px;
     }
 }
 
