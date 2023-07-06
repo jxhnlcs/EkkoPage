@@ -980,7 +980,7 @@ footer .bottom-details .bottom_text {
         }
 
         .why h2{
-            font-size: 22px;
+            font-size: 20px;
         }
 
         .whyRow img{
@@ -1016,7 +1016,7 @@ footer .bottom-details .bottom_text {
         }
 
         .contatoRow h2{
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .contatoIcons a img{
