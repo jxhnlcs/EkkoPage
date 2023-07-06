@@ -9,7 +9,10 @@
                 <li><a href="#Sobre">Sobre</a></li>
                 <li><a href="#Soluções">Soluções</a></li>
                 <li><a href="#Contato">Contato</a></li>
+                <h1 class="menu">&#9776;</h1>
+                
             </ul>
+            
         </nav>
         <!--Main-->
         <div class="main">
@@ -919,6 +922,7 @@ footer .bottom-details .bottom_text {
     .sistemas img,
     .sites img,
     .aplicativos img {
+        margin-top: 60px;
         width: 400px;
     }
 
@@ -928,10 +932,6 @@ footer .bottom-details .bottom_text {
         font-size: 18px;
         font-style: italic;
         font-weight: 400;
-    }
-
-    .sistemas img {
-        margin-top: 60px;
     }
 
     .solutionText {
@@ -960,5 +960,58 @@ footer .bottom-details .bottom_text {
 
     footer {
         margin-top: 50px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .header nav{
+            display: block;
+            padding: 0;
+        }
+        .header nav ul li {
+            display: none;
+        }
+
+        .why h1{
+            font-size: 28px;
+        }
+
+        .why h2{
+            font-size: 22px;
+        }
+
+        .whyRow img{
+            width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .icons{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sistemas .solutionText, .sites .solutionText, .aplicativos .solutionText {
+            text-align: center;
+            width: 300px;
+        }
+
+        .sistemas img, .sites img, .aplicativos img {
+            width: 350px;
+        }
+
+        .contatoSection{
+            margin-top: 10px;
+        }
+
+        .contatoRow h1{
+            font-size: 36px;
+        }
+
+        .contatoRow h2{
+            font-size: 20px;
+        }
+
+        .contatoIcons a img{
+            width: 55px;
+        }
     }
 }</style>
