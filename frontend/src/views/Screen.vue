@@ -14,9 +14,10 @@
         <!--Main-->
         <div class="main">
             <img src="../assets/img/ekkosemfundo.png" alt="">
-            <div>
+            <div class="mainColumn">
                 <h1><span>AUTOMATIZE</span><br>processos e ganhe tempo com<br>nossas soluções inteligentes<br></h1>
-                <a href="https://api.whatsapp.com/send/?phone=557592868576&text&type=phone_number&app_absent=0">Peça Agora</a>
+                <a href="https://api.whatsapp.com/send/?phone=557592868576&text&type=phone_number&app_absent=0">Peça
+                    Agora</a>
             </div>
         </div>
         <div></div>
@@ -81,9 +82,10 @@
             <div class="sites animated-div3">
                 <div class="solutionText">
                     <h2>Landing Page</h2>
-                    <h3>Transforme sua presença online com landing pages<br> impactantes e envolventes, criadas por nossa
-                        equipe<br>
-                        especializada em design e desenvolvimento</h3>
+                    <h3>Transforme sua presença online com landing<br> pages impactantes e envolventes, criadas por<br>
+                        nossa
+                        equipe
+                        especializada em design</h3>
                 </div>
                 <img src="../assets/img/landingPage.png" alt="">
             </div>
@@ -100,23 +102,27 @@
 
     <!--Contate-nos-->
 
-    <div id="Contato" class="contatoSection animated-div5">
-        <div class="contatoRow">
+    <div id="Contato" class="contatoSection">
+        <div class="contatoRow animated-div5">
             <div class="contatoColumn">
                 <h1>Contate-nos</h1>
                 <h2>Tire dúvidas ou planeje um orçamento.<br>Nossa equipe especializada está pronta<br>para esclarecer todas
                     as suas dúvidas e<br>fornecer informações detalhadas sobre<br>nossos produtos e serviços.</h2>
                 <div class="contatoIcons">
-                    <a class="wpp" href="https://api.whatsapp.com/send/?phone=557592868576&text&type=phone_number&app_absent=0"><img src="../assets/img/whatsapp.png" alt="Whatsapp icon"></a>
-                    <a  class="insta" href="https://www.instagram.com/ekko.sistemas/"><img src="../assets/img/instagram.png" alt="Instagram icon"></a>
-                    <a class="email" href="mailto:ekkosistemas@outlook.com"><img src="../assets/img/outlook.png" alt="Outlook icon"></a>
+                    <a class="wpp"
+                        href="https://api.whatsapp.com/send/?phone=557592868576&text&type=phone_number&app_absent=0"><img
+                            src="../assets/img/whatsapp.png" alt="Whatsapp icon"></a>
+                    <a class="insta" href="https://www.instagram.com/ekko.sistemas/"><img src="../assets/img/instagram.png"
+                            alt="Instagram icon"></a>
+                    <a class="email" href="mailto:ekkosistemas@outlook.com"><img src="../assets/img/outlook.png"
+                            alt="Outlook icon"></a>
                 </div>
             </div>
-            <img src="../assets/img/contact-us-animate.svg" alt="">
+            <img class="contatoImg" src="../assets/img/contact-us-animate.svg" alt="">
         </div>
     </div>
-     <!--Botão back to top-->
-     <div class="back-to-top" v-if="showBackToTop" @click="scrollToTop">
+    <!--Botão back to top-->
+    <div class="back-to-top" v-if="showBackToTop" @click="scrollToTop">
         <i class="fa fa-arrow-up"></i>
     </div>
 
@@ -129,6 +135,61 @@
         </div>
     </footer>
 </template>
+
+<script>
+export default {
+
+    data() {
+        return {
+            showBackToTop: false
+        };
+    },
+
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('scroll', this.animateDivs);
+    },
+
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('scroll', this.animateDivs);
+    },
+
+    methods: {
+
+        handleScroll() {
+            this.showBackToTop = window.scrollY > 500;
+        },
+
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        },
+
+        animateDivs() {
+            this.animateDiv(".animated-div");
+            this.animateDiv(".animated-div2");
+            this.animateDiv(".animated-div3");
+            this.animateDiv(".animated-div4");
+            this.animateDiv(".animated-div5");
+            this.animateDiv(".animated-div6");
+            this.animateDiv(".animated-div7");
+            this.animateDiv(".animated-div8");
+            this.animateDiv(".animated-div9");
+        },
+        animateDiv(selector) {
+            var animatedDiv = document.querySelector(selector);
+            var position = animatedDiv.getBoundingClientRect();
+
+            if (position.top < window.innerHeight && position.bottom >= 0) {
+                animatedDiv.classList.add("animate");
+            }
+        }
+    }
+}
+</script>
 
 <style>
 .header {
@@ -258,9 +319,8 @@
 
 .whyRow {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-
 }
 
 .why h1 {
@@ -271,7 +331,6 @@
 }
 
 .whyRow img {
-    margin-left: 50px;
     width: 700px;
 }
 
@@ -470,15 +529,17 @@
     cursor: default;
 }
 
-.contatoSection{
+/*Contato */
+
+.contatoSection {
     margin-top: 60px;
 }
 
-.contatoRow{
+.contatoRow {
     display: flex;
     /* justify-content: center; */
     justify-content: space-around;
-    
+
 }
 
 .contatoRow h1 {
@@ -502,46 +563,40 @@
     font-style: italic;
 }
 
-.contatoIcons{
+.contatoIcons {
     display: flex;
     justify-content: start;
     margin-top: 15px;
-    
+
 }
 
-.contatoIcons 
-.email{
-    transition: transform 0.6s;   
+.contatoIcons .email {
+    transition: transform 0.6s;
 }
 
-.contatoIcons 
-.wpp{
-    transition: transform 0.6s;   
+.contatoIcons .wpp {
+    transition: transform 0.6s;
 }
 
-.contatoIcons 
-.insta{
-    transition: transform 0.6s;   
+.contatoIcons .insta {
+    transition: transform 0.6s;
 }
 
 
-.contatoIcons 
-.email:hover{
+.contatoIcons .email:hover {
     transform: scale(1.1);
 }
 
-.contatoIcons 
-.wpp:hover{
+.contatoIcons .wpp:hover {
     transform: scale(1.1);
 }
 
-.contatoIcons 
-.insta:hover{
+.contatoIcons .insta:hover {
     transform: scale(1.1);
 }
 
 
-.contatoIcons a img{
+.contatoIcons a img {
     width: 65px;
     margin-right: 39px;
     border-radius: 50%;
@@ -549,31 +604,35 @@
 
 /* Footer */
 
-footer .bottom-details{
-  width: 100%;
-  background: var(--primary-color);
-  display: flex;
-  align-items: center;
+footer .bottom-details {
+    width: 100%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
 }
-footer .bottom-details .bottom_text{
-  margin: auto;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
+
+footer .bottom-details .bottom_text {
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
 }
+
 .bottom-details .bottom_text span,
-.bottom-details .bottom_text a{
-  font-size: 14px;
-  color: var(--secondary-color);
-  font-weight: bold;
-  text-decoration: none;
+.bottom-details .bottom_text a {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
 }
-.bottom-details .bottom_text a:hover{
-  opacity: 1;
-  text-decoration: underline;
+
+.bottom-details .bottom_text a:hover {
+    opacity: 1;
+    text-decoration: underline;
 }
-.bottom-details .bottom_text a{
-  margin-right: 10px;
+
+.bottom-details .bottom_text a {
+    margin-right: 10px;
 }
 
 .back-to-top {
@@ -583,7 +642,7 @@ footer .bottom-details .bottom_text{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color:var(--quarter-color);
+    background-color: var(--quarter-color);
     color: var(--secondary-color);
     display: flex;
     justify-content: center;
@@ -591,7 +650,7 @@ footer .bottom-details .bottom_text{
     cursor: pointer;
     opacity: 1;
     transition: opacity 1s;
-    transition: background-color  0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .back-to-top:hover {
@@ -602,150 +661,304 @@ footer .bottom-details .bottom_text{
 .back-to-top.show {
     opacity: 1;
 }
+
 .animated-div {
-    opacity: 0; /* Define a div como invisível */
-    transform: translateX(-100%); /* Move a div para fora da tela */
-    transition: opacity 1.4s ease-out, transform 1.4s ease-out; /* Define a transição */
-  }
-  
-  .animated-div.animate {
-    opacity: 1; /* Define a div como visível */
-    transform: translateX(0); /* Move a div para dentro da tela */
-  }
+    opacity: 0;
+    /* Define a div como invisível */
+    transform: translateX(-100%);
+    /* Move a div para fora da tela */
+    transition: opacity 1.4s ease-out, transform 1.4s ease-out;
+    /* Define a transição */
+}
+
+.animated-div.animate {
+    opacity: 1;
+    /* Define a div como visível */
+    transform: translateX(0);
+    /* Move a div para dentro da tela */
+}
 
 @keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .animated-div2 {
-    opacity: 0; /* Define a div como invisível */
-    transform: translateX(-100%); /* Move a div para fora da tela */
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Define a transição */
-  }
-  
-  .animated-div2.animate {
-    opacity: 1; /* Define a div como visível */
-    transform: translateX(0); /* Move a div para dentro da tela */
-  }
+    opacity: 0;
+    /* Define a div como invisível */
+    transform: translateX(-100%);
+    /* Move a div para fora da tela */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    /* Define a transição */
+}
 
-  .animated-div3 {
-    opacity: 0; /* Define a div como invisível */
-    transform: translateX(100%); /* Move a div para fora da tela */
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Define a transição */
-  }
-  
-  .animated-div3.animate {
-    opacity: 1; /* Define a div como visível */
-    transform: translateX(0); /* Move a div para dentro da tela */
-  }
+.animated-div2.animate {
+    opacity: 1;
+    /* Define a div como visível */
+    transform: translateX(0);
+    /* Move a div para dentro da tela */
+}
 
-  .animated-div4 {
-    opacity: 0; /* Define a div como invisível */
-    transform: translateX(-100%); /* Move a div para fora da tela */
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Define a transição */
-  }
-  
-  .animated-div4.animate {
-    opacity: 1; /* Define a div como visível */
-    transform: translateX(0); /* Move a div para dentro da tela */
-  }
+.animated-div3 {
+    opacity: 0;
+    /* Define a div como invisível */
+    transform: translateX(100%);
+    /* Move a div para fora da tela */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    /* Define a transição */
+}
 
-  .animated-div5 {
-    opacity: 0; /* Define a div como invisível */
-    transform: translateX(100%); /* Move a div para fora da tela */
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Define a transição */
-  }
-  
-  .animated-div5.animate {
-    opacity: 1; /* Define a div como visível */
-    transform: translateX(0); /* Move a div para dentro da tela */
-  }
+.animated-div3.animate {
+    opacity: 1;
+    /* Define a div como visível */
+    transform: translateX(0);
+    /* Move a div para dentro da tela */
+}
+
+.animated-div4 {
+    opacity: 0;
+    /* Define a div como invisível */
+    transform: translateX(-100%);
+    /* Move a div para fora da tela */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    /* Define a transição */
+}
+
+.animated-div4.animate {
+    opacity: 1;
+    /* Define a div como visível */
+    transform: translateX(0);
+    /* Move a div para dentro da tela */
+}
+
+.animated-div5 {
+    opacity: 0;
+    /* Define a div como invisível */
+    transform: translateX(100%);
+    /* Move a div para fora da tela */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    /* Define a transição */
+}
+
+.animated-div5.animate {
+    opacity: 1;
+    /* Define a div como visível */
+    transform: translateX(0);
+    /* Move a div para dentro da tela */
+}
 
 .animated-div6 {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: fadeSlideIn 0.9s ease-out forwards;
-  animation-delay: 1s; /* Atraso de 2 segundos */
+    opacity: 0;
+    transform: translateX(100%);
+    animation: fadeSlideIn 0.9s ease-out forwards;
+    animation-delay: 1s;
+    /* Atraso de 2 segundos */
 }
 
 .animated-div7 {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: fadeSlideIn 0.9s ease-out forwards;
-  animation-delay: 1.2s; /* Atraso de 2.2 segundos */
+    opacity: 0;
+    transform: translateX(100%);
+    animation: fadeSlideIn 0.9s ease-out forwards;
+    animation-delay: 1.2s;
+    /* Atraso de 2.2 segundos */
 }
 
 .animated-div8 {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: fadeSlideIn 0.9s ease-out forwards;
-  animation-delay: 1.4s; /* Atraso de 2.4 segundos */
+    opacity: 0;
+    transform: translateX(100%);
+    animation: fadeSlideIn 0.9s ease-out forwards;
+    animation-delay: 1.4s;
+    /* Atraso de 2.4 segundos */
 }
 
 .animated-div9 {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: fadeSlideIn 0.9s ease-out forwards;
-  animation-delay: 1.6s; /* Atraso de 2.6 segundos */
+    opacity: 0;
+    transform: translateX(100%);
+    animation: fadeSlideIn 0.9s ease-out forwards;
+    animation-delay: 1.6s;
+    /* Atraso de 2.6 segundos */
+
 }
 
+@media only screen and (max-width: 1600px) {
 
-</style>
 
-<script>
-export default {
-  data() {
-    return {
-      showBackToTop: false
-    };
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('scroll', this.animateDivs);
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('scroll', this.animateDivs);
-  },
-  methods: {
-    handleScroll() {
-      this.showBackToTop = window.scrollY > 500;
-    },
-    scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    },
-    animateDivs() {
-      this.animateDiv(".animated-div");
-      this.animateDiv(".animated-div2");
-      this.animateDiv(".animated-div3");
-      this.animateDiv(".animated-div4");
-      this.animateDiv(".animated-div5");
-      this.animateDiv(".animated-div6");
-      this.animateDiv(".animated-div7");
-      this.animateDiv(".animated-div8");
-      this.animateDiv(".animated-div9");
-    },
-    animateDiv(selector) {
-      var animatedDiv = document.querySelector(selector);
-      var position = animatedDiv.getBoundingClientRect();
-
-      if (position.top < window.innerHeight && position.bottom >= 0) {
-        animatedDiv.classList.add("animate");
-      }
+    .whyRow {
+        justify-content: center;
     }
-  }
+
+    .whyRow img {
+        width: 550px;
+    }
+
+    .whyRow h1 {
+        font-size: 38px;
+    }
+
+    .whyRow h2 {
+        font-size: 22px;
+    }
+
+    .icons {
+        justify-content: center;
+    }
+
+    .icons a {
+        padding: 20px 25px;
+        margin-left: 120px;
+        margin-right: 120px;
+        border-radius: 30px;
+    }
+
+
+    .sistemas .solutionText,
+    .sites .solutionText,
+    .aplicativos .solutionText {
+        margin-top: 45px;
+        width: 500px;
+    }
+
+    .sistemas img,
+    .sites img,
+    .aplicativos img {
+        width: 600px;
+    }
+
+    .sistemas .solutionText h3,
+    .sites .solutionText h3,
+    .aplicativos .solutionText h3 {
+        font-size: 26px;
+        font-style: italic;
+        font-weight: 400;
+    }
 }
 
-  
+@media only screen and (max-width: 1000px) {
 
-</script>
+    .header .main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header .main h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .header .main span {
+        font-size: 40px;
+    }
+
+    .main a {
+        margin-left: 0px;
+    }
+
+    .main img {
+        display: none;
+    }
+
+    .header nav img {
+        margin-right: 0px;
+    }
+
+    .whyColumn {
+        text-align: center;
+    }
+
+    .whyRow {
+        flex-direction: column;
+    }
+
+
+    .whyRow h2 {
+        font-size: 30px;
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px 10px;
+    }
+
+    .icons a {
+        padding: 10px 15px;
+    }
+
+    .icons a span {
+        font-size: 40px;
+    }
+
+    .sistemas,
+    .sites,
+    .aplicativos {
+        flex-direction: column;
+    }
+
+    .sistemas .solutionText,
+    .sites .solutionText,
+    .aplicativos .solutionText {
+        text-align: center;
+        width: 400px;
+    }
+
+    .sistemas .solutionText h2,
+    .sites .solutionText h2,
+    .aplicativos .solutionText h2 {
+        font-size: 20px;
+    }
+
+    .sistemas img,
+    .sites img,
+    .aplicativos img {
+        width: 400px;
+    }
+
+    .sistemas .solutionText h3,
+    .sites .solutionText h3,
+    .aplicativos .solutionText h3 {
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    .sistemas img {
+        margin-top: 60px;
+    }
+
+    .solutionText {
+        order: 2;
+    }
+
+    .sites img {
+        order: 1;
+    }
+
+    .contatoColumn {
+        text-align: center;
+    }
+
+    .contatoIcons {
+        justify-content: space-around;
+    }
+
+    .contatoIcons a img {
+        margin-right: 0px;
+    }
+
+    .contatoImg {
+        display: none;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+}</style>
