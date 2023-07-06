@@ -815,7 +815,6 @@ footer .bottom-details .bottom_text {
     }
 
     .icons a {
-        padding: 20px 25px;
         margin-left: 120px;
         margin-right: 120px;
     }
