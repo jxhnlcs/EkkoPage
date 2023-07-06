@@ -907,6 +907,7 @@ footer .bottom-details .bottom_text {
 
     .whyColumn {
         text-align: center;
+        margin-left: 0px;
     }
 
     .whyRow {
