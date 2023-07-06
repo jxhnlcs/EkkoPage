@@ -362,7 +362,7 @@ export default {
 .icons a {
     background-color: var(--primary-color);
     padding: 50px 55px;
-    border-radius: 50px;
+    border-radius: 50%;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -818,7 +818,6 @@ footer .bottom-details .bottom_text {
         padding: 20px 25px;
         margin-left: 120px;
         margin-right: 120px;
-        border-radius: 30px;
     }
 
 
@@ -890,7 +889,6 @@ footer .bottom-details .bottom_text {
         flex-direction: column;
     }
 
-
     .whyRow h2 {
         font-size: 30px;
     }
@@ -902,7 +900,7 @@ footer .bottom-details .bottom_text {
     }
 
     .icons a {
-        padding: 10px 15px;
+        padding: 12px 15px;
     }
 
     .icons a span {
