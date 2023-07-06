@@ -906,6 +906,10 @@ footer .bottom-details .bottom_text {
         flex-direction: column;
     }
 
+    .aplicativos .solutionText{
+        margin-bottom: 50px;
+    }
+
     .sistemas .solutionText,
     .sites .solutionText,
     .aplicativos .solutionText {
@@ -982,6 +986,11 @@ footer .bottom-details .bottom_text {
         .whyRow img{
             width: 300px;
             margin-bottom: 30px;
+        }
+
+        .animated-div3,
+        .animated-div5{
+            transform: translateX(-100%);
         }
 
         .icons{
