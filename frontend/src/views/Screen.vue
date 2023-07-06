@@ -386,7 +386,7 @@ export default {
 /* Soluções */
 
 .solutionsSection {
-    margin-top: 150px;
+    margin-top: 30px;
     text-align: center;
     background: rgb(0, 136, 181);
     background: linear-gradient(180deg, rgba(0, 136, 181, 1) 50%, rgba(0, 54, 108, 1) 84%);
@@ -907,7 +907,7 @@ footer .bottom-details .bottom_text {
     }
 
     .aplicativos .solutionText{
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
 
     .sistemas .solutionText,
@@ -946,6 +946,22 @@ footer .bottom-details .bottom_text {
         order: 1;
     }
 
+    .contatoRow{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contatoRow h1{
+        margin-top: 60px;
+    }
+
+    .contatoRow img{
+        margin-top: 15px;
+        width: 300px;
+    }
+
     .contatoColumn {
         text-align: center;
     }
@@ -958,9 +974,7 @@ footer .bottom-details .bottom_text {
         margin-right: 0px;
     }
 
-    .contatoImg {
-        display: none;
-    }
+    
 
     footer {
         margin-top: 50px;
