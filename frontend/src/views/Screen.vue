@@ -386,7 +386,7 @@ export default {
 /* Soluções */
 
 .solutionsSection {
-    margin-top: 30px;
+    margin-top: 130px;
     text-align: center;
     background: rgb(0, 136, 181);
     background: linear-gradient(180deg, rgba(0, 136, 181, 1) 50%, rgba(0, 54, 108, 1) 84%);
