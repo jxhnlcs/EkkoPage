@@ -1022,8 +1022,7 @@ footer .bottom-details .bottom_text {
 
     .sistemas img,
     .sites img,
-    .aplicativos img,
-    .socialmidia img {
+    .aplicativos img {
         margin-top: 60px;
         width: 400px;
     }
@@ -1035,6 +1034,11 @@ footer .bottom-details .bottom_text {
         font-size: 18px;
         font-style: italic;
         font-weight: 400;
+    }
+
+
+    .socialmidia{
+        margin-top: -75px;
     }
 
     .solutionText {
