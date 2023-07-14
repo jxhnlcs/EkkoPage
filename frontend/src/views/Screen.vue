@@ -100,6 +100,13 @@
                         experiência do usuário e<br>impulsionar o crescimento do seu negócio</h3>
                 </div>
             </div>
+            <div class="socialmidia animated-div10">
+                <div class="solutionText">
+                    <h2>Social Mídia</h2>
+                    <h3>Impulsione sua presença online com nosso<br>serviço de mídia social.<br> Alcance seu público-alvo, fortaleça<br> sua marca e obtenha resultados reais.</h3>
+                </div>
+                <img src="../assets/img/socialmidia2.png" alt="">
+            </div>
         </div>
     </div>
 
@@ -181,6 +188,7 @@ export default {
             this.animateDiv(".animated-div7");
             this.animateDiv(".animated-div8");
             this.animateDiv(".animated-div9");
+            this.animateDiv(".animated-div10");
         },
         animateDiv(selector) {
             var animatedDiv = document.querySelector(selector);
@@ -411,7 +419,8 @@ export default {
 
 .sistemas,
 .sites,
-.aplicativos {
+.aplicativos,
+.socialmidia {
     margin-top: 150px;
     display: inline-block;
     text-align: center;
@@ -425,6 +434,11 @@ export default {
 }
 
 .aplicativos {
+    margin-top: -30px;
+   
+}
+
+.socialmidia {
     margin-top: -30px;
     margin-bottom: 100px;
 }
@@ -487,6 +501,26 @@ export default {
     font-weight: 100;
 }
 
+.socialmidia .solutionText {
+    text-align: left;
+    background-color: var(--tertiary-color);
+    padding: 5px 30px;
+    border-radius: 30px;
+    box-shadow: 0 0.5rem 4rem rgba(197, 197, 197, 0.452);
+    transition: 0.6s;
+}
+
+.socialmidia .solutionText h2 {
+    font-size: 30px;
+}
+
+.socialmidia .solutionText h3 {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+
 .sites .solutionText {
     text-align: right;
 }
@@ -503,23 +537,30 @@ export default {
     box-shadow: none;
 }
 
+.socialmidia .solutionText:hover {
+    box-shadow: none;
+}
+
 .sistemas img,
 .sites img,
-.aplicativos img {
+.aplicativos img,
+.socialmidia img {
     width: 850px;
     transition: transform 0.6s;
 }
 
 .sistemas img:hover,
 .sites img:hover,
-.aplicativos img:hover {
+.aplicativos img:hover,
+.socialmidia img:hover {
     transform: scale(1.1);
     /* Amplia a imagem em 10% */
 }
 
 .sistemas h2,
 .sites h2,
-.aplicativos h2 {
+.aplicativos h2,
+.socialmidia h2 {
     color: var(--secondary-color);
     font-size: 2.0rem;
     cursor: default;
@@ -527,7 +568,8 @@ export default {
 
 .sistemas h3,
 .sites h3,
-.aplicativos h3 {
+.aplicativos h3,
+.socialmidia h3 {
     color: var(--secondary-color);
     font-size: 1.2rem;
     cursor: default;
@@ -791,6 +833,22 @@ footer .bottom-details .bottom_text {
 
 }
 
+.animated-div10 {
+    opacity: 0;
+    /* Define a div como invisível */
+    transform: translateX(100%);
+    /* Move a div para fora da tela */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    /* Define a transição */
+}
+
+.animated-div10.animate {
+    opacity: 1;
+    /* Define a div como visível */
+    transform: translateX(0);
+    /* Move a div para dentro da tela */
+}
+
 @media only screen and (max-width: 1600px) {
 
 
@@ -822,20 +880,23 @@ footer .bottom-details .bottom_text {
 
     .sistemas .solutionText,
     .sites .solutionText,
-    .aplicativos .solutionText {
+    .aplicativos .solutionText,
+    .socialmidia .solutionText {
         margin-top: 45px;
         width: 500px;
     }
 
     .sistemas img,
     .sites img,
-    .aplicativos img {
+    .aplicativos img,
+    .socialmidia img {
         width: 600px;
     }
 
     .sistemas .solutionText h3,
     .sites .solutionText h3,
-    .aplicativos .solutionText h3 {
+    .aplicativos .solutionText h3,
+    .socialmidia .solutionText h3 {
         font-size: 26px;
         font-style: italic;
         font-weight: 400;
@@ -934,7 +995,8 @@ footer .bottom-details .bottom_text {
 
     .sistemas,
     .sites,
-    .aplicativos {
+    .aplicativos,
+    .socialmidia {
         flex-direction: column;
     }
 
@@ -944,27 +1006,32 @@ footer .bottom-details .bottom_text {
 
     .sistemas .solutionText,
     .sites .solutionText,
-    .aplicativos .solutionText {
+    .aplicativos .solutionText,
+    .socialmidia .solutionText
+    {
         text-align: center;
         width: 400px;
     }
 
     .sistemas .solutionText h2,
     .sites .solutionText h2,
-    .aplicativos .solutionText h2 {
+    .aplicativos .solutionText h2,
+    .socialmidia .solutionText h2 {
         font-size: 20px;
     }
 
     .sistemas img,
     .sites img,
-    .aplicativos img {
+    .aplicativos img,
+    .socialmidia img {
         margin-top: 60px;
         width: 400px;
     }
 
     .sistemas .solutionText h3,
     .sites .solutionText h3,
-    .aplicativos .solutionText h3 {
+    .aplicativos .solutionText h3,
+    .socialmidia .solutionText h3 {
         font-size: 18px;
         font-style: italic;
         font-weight: 400;
@@ -1035,7 +1102,8 @@ footer .bottom-details .bottom_text {
         }
 
         .animated-div3,
-        .animated-div5{
+        .animated-div5,
+        .animated-div10{
             transform: translateX(-100%);
         }
 
@@ -1044,12 +1112,12 @@ footer .bottom-details .bottom_text {
             flex-direction: column;
         }
 
-        .sistemas .solutionText, .sites .solutionText, .aplicativos .solutionText {
+        .sistemas .solutionText, .sites .solutionText, .aplicativos .solutionText, .socialmidia .solutionText {
             text-align: center;
             width: 300px;
         }
 
-        .sistemas img, .sites img, .aplicativos img {
+        .sistemas img, .sites img, .aplicativos img, .socialmidia img {
             width: 350px;
         }
 
