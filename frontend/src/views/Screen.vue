@@ -105,7 +105,7 @@
                     <h2>Social Mídia</h2>
                     <h3>Impulsione sua presença online com nosso<br>serviço de mídia social.<br> Alcance seu público-alvo, fortaleça<br> sua marca e obtenha resultados reais.</h3>
                 </div>
-                <img src="../assets/img/socialmidia2.png" alt="">
+                <img src="../assets/img/socialmidia.png" alt="">
             </div>
         </div>
     </div>
